@@ -1,0 +1,10 @@
+build:
+  docker:
+  with: Dockerfile
+
+run:
+  web: npm run start
+release:
+  image: web
+  command:
+    - npm wun migrate up
